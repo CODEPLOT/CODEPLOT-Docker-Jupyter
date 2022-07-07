@@ -1,0 +1,1 @@
+SOAP filter  -n 0.1 -q 0.5 -T 1 -i -l 10 -Q 2 -5 1 -7 1 -G -M 2  -f AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -r AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA   -o test -1 ./../../00.data/1.short_PE_reads/test_1.fq.gz -2 ./../../00.data/1.short_PE_reads/test_2.fq.gz  -C test_1.clean.fq  -D test_2.clean.fq

@@ -1,0 +1,2 @@
+deb-src http://mirrors.aliyun.com/debian-security buster/updates main
+deb http://mirrors.aliyun.com/debian/ buster main non-free contrib

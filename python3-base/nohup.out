@@ -1,0 +1,885 @@
+Sending build context to Docker daemon 5.632 kB
+Step 1/4 : FROM docker.io/jupyterhub/k8s-singleuser-sample:v0.2
+ ---> a31e573da46b
+Step 2/4 : RUN apt install -y less vi
+ ---> Running in 4531456696b9
+
+[91m[0m[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+[91mE: Unable to locate package vi
+[0mThe command '/bin/bash -o pipefail -c apt install -y less vi' returned a non-zero code: 100
+Sending build context to Docker daemon 6.656 kB
+Step 1/4 : FROM docker.io/jupyterhub/k8s-singleuser-sample:v0.2
+ ---> a31e573da46b
+Step 2/4 : RUN apt install -y less vim  curl
+ ---> Running in 425800f4a61a
+
+[91m[0m[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.68.0-1ubuntu2.7).
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf libasound2 libasound2-data libcanberra0
+  libgpm2 libltdl7 libmpdec2 libogg0 libpython3.8 libpython3.8-minimal
+  libpython3.8-stdlib libtdb1 libvorbis0a libvorbisfile3
+  sound-theme-freedesktop vim-common vim-runtime xxd
+Suggested packages:
+  libasound2-plugins alsa-utils libcanberra-gtk0 libcanberra-pulse gpm ctags
+  vim-doc vim-scripts
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf less libasound2 libasound2-data
+  libcanberra0 libgpm2 libltdl7 libmpdec2 libogg0 libpython3.8
+  libpython3.8-minimal libpython3.8-stdlib libtdb1 libvorbis0a libvorbisfile3
+  sound-theme-freedesktop vim vim-common vim-runtime xxd
+0 upgraded, 21 newly installed, 0 to remove and 5 not upgraded.
+Need to get 12.5 MB of archives.
+After this operation, 57.8 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 less amd64 551-1ubuntu0.1 [123 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpdec2 amd64 2.4.2-3 [81.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.2 [717 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.2 [1,675 kB]
+Ign:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.4
+Ign:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.4
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 alsa-topology-conf all 1.2.2-1 [7,364 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 alsa-ucm-conf all 1.2.2-1ubuntu0.11 [26.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2-data all 1.2.2-2.1ubuntu2.5 [20.1 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2 amd64 1.2.2-2.1ubuntu2.5 [335 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 libltdl7 amd64 2.4.6-14 [38.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtdb1 amd64 1.4.3-0ubuntu0.20.04.1 [44.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 libogg0 amd64 1.3.4-0ubuntu1 [24.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 libvorbis0a amd64 1.3.6-2ubuntu1 [87.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal/main amd64 libvorbisfile3 amd64 1.3.6-2ubuntu1 [16.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal/main amd64 sound-theme-freedesktop all 0.8-2ubuntu1 [384 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libcanberra0 amd64 0.30-7ubuntu1 [38.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 libgpm2 amd64 1.20.7-5 [15.1 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.2 [1,625 kB]
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.4
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.4
+Err:5 http://security.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.152 80]
+Err:6 http://security.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.152 80]
+Err:20 http://security.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.152 80]
+Err:21 http://security.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.152 80]
+Fetched 5,258 kB in 4s (1,237 kB/s)
+[91mE: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/xxd_8.1.2269-1ubuntu5.4_amd64.deb  404  Not Found [IP: 91.189.88.152 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-common_8.1.2269-1ubuntu5.4_all.deb  404  Not Found [IP: 91.189.88.152 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-runtime_8.1.2269-1ubuntu5.4_all.deb  404  Not Found [IP: 91.189.88.152 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.4_amd64.deb  404  Not Found [IP: 91.189.88.152 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+[0mThe command '/bin/bash -o pipefail -c apt install -y less vim  curl' returned a non-zero code: 100
+Sending build context to Docker daemon 11.26 kB
+Step 1/4 : FROM docker.io/jupyterhub/k8s-singleuser-sample:v0.2
+ ---> a31e573da46b
+Step 2/4 : RUN apt install -y less vim
+ ---> Running in 6a78bc3544f0
+
+[91m[0m[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf libasound2 libasound2-data libcanberra0
+  libgpm2 libltdl7 libmpdec2 libogg0 libpython3.8 libpython3.8-minimal
+  libpython3.8-stdlib libtdb1 libvorbis0a libvorbisfile3
+  sound-theme-freedesktop vim-common vim-runtime xxd
+Suggested packages:
+  libasound2-plugins alsa-utils libcanberra-gtk0 libcanberra-pulse gpm ctags
+  vim-doc vim-scripts
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf less libasound2 libasound2-data
+  libcanberra0 libgpm2 libltdl7 libmpdec2 libogg0 libpython3.8
+  libpython3.8-minimal libpython3.8-stdlib libtdb1 libvorbis0a libvorbisfile3
+  sound-theme-freedesktop vim vim-common vim-runtime xxd
+0 upgraded, 21 newly installed, 0 to remove and 5 not upgraded.
+Need to get 12.5 MB of archives.
+After this operation, 57.8 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 less amd64 551-1ubuntu0.1 [123 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpdec2 amd64 2.4.2-3 [81.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.2 [717 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.2 [1,675 kB]
+Ign:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.4
+Ign:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.4
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 alsa-topology-conf all 1.2.2-1 [7,364 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 alsa-ucm-conf all 1.2.2-1ubuntu0.11 [26.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2-data all 1.2.2-2.1ubuntu2.5 [20.1 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2 amd64 1.2.2-2.1ubuntu2.5 [335 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 libltdl7 amd64 2.4.6-14 [38.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtdb1 amd64 1.4.3-0ubuntu0.20.04.1 [44.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 libogg0 amd64 1.3.4-0ubuntu1 [24.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 libvorbis0a amd64 1.3.6-2ubuntu1 [87.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal/main amd64 libvorbisfile3 amd64 1.3.6-2ubuntu1 [16.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal/main amd64 sound-theme-freedesktop all 0.8-2ubuntu1 [384 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libcanberra0 amd64 0.30-7ubuntu1 [38.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 libgpm2 amd64 1.20.7-5 [15.1 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.2 [1,625 kB]
+Err:5 http://security.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.142 80]
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.4
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.4
+Err:6 http://security.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.142 80]
+Err:20 http://security.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.142 80]
+Err:21 http://security.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.4
+  404  Not Found [IP: 91.189.88.142 80]
+Fetched 5,258 kB in 5s (958 kB/s)
+[91mE: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/xxd_8.1.2269-1ubuntu5.4_amd64.deb  404  Not Found [IP: 91.189.88.142 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-common_8.1.2269-1ubuntu5.4_all.deb  404  Not Found [IP: 91.189.88.142 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-runtime_8.1.2269-1ubuntu5.4_all.deb  404  Not Found [IP: 91.189.88.142 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.4_amd64.deb  404  Not Found [IP: 91.189.88.142 80]
+E: [0m[91mUnable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+[0mThe command '/bin/bash -o pipefail -c apt install -y less vim' returned a non-zero code: 100
+Sending build context to Docker daemon 16.38 kB
+Step 1/4 : FROM docker.io/jupyterhub/k8s-singleuser-sample:v0.2
+ ---> a31e573da46b
+Step 2/4 : RUN apt-get update -qq     && apt install -y less vim
+ ---> Running in 22ce6bd19acf
+[91m[0m
+[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf libasound2 libasound2-data libcanberra0
+  libgpm2 libltdl7 libmpdec2 libogg0 libpython3.8 libpython3.8-minimal
+  libpython3.8-stdlib libtdb1 libvorbis0a libvorbisfile3
+  sound-theme-freedesktop vim-common vim-runtime xxd
+Suggested packages:
+  libasound2-plugins alsa-utils libcanberra-gtk0 libcanberra-pulse gpm ctags
+  vim-doc vim-scripts
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf less libasound2 libasound2-data
+  libcanberra0 libgpm2 libltdl7 libmpdec2 libogg0 libpython3.8
+  libpython3.8-minimal libpython3.8-stdlib libtdb1 libvorbis0a libvorbisfile3
+  sound-theme-freedesktop vim vim-common vim-runtime xxd
+0 upgraded, 21 newly installed, 0 to remove and 15 not upgraded.
+Need to get 12.5 MB of archives.
+After this operation, 57.8 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 less amd64 551-1ubuntu0.1 [123 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpdec2 amd64 2.4.2-3 [81.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.2 [717 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.2 [1,675 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.7 [50.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.7 [85.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 alsa-topology-conf all 1.2.2-1 [7,364 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 alsa-ucm-conf all 1.2.2-1ubuntu0.11 [26.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2-data all 1.2.2-2.1ubuntu2.5 [20.1 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasound2 amd64 1.2.2-2.1ubuntu2.5 [335 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 libltdl7 amd64 2.4.6-14 [38.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtdb1 amd64 1.4.3-0ubuntu0.20.04.1 [44.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 libogg0 amd64 1.3.4-0ubuntu1 [24.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 libvorbis0a amd64 1.3.6-2ubuntu1 [87.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal/main amd64 libvorbisfile3 amd64 1.3.6-2ubuntu1 [16.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal/main amd64 sound-theme-freedesktop all 0.8-2ubuntu1 [384 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libcanberra0 amd64 0.30-7ubuntu1 [38.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 libgpm2 amd64 1.20.7-5 [15.1 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.2 [1,625 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.7 [5,872 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.7 [1,238 kB]
+Fetched 12.5 MB in 6s (1,972 kB/s)
+Selecting previously unselected package less.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18197 files and directories currently installed.)
+Preparing to unpack .../00-less_551-1ubuntu0.1_amd64.deb ...
+Unpacking less (551-1ubuntu0.1) ...
+Selecting previously unselected package libmpdec2:amd64.
+Preparing to unpack .../01-libmpdec2_2.4.2-3_amd64.deb ...
+Unpacking libmpdec2:amd64 (2.4.2-3) ...
+Selecting previously unselected package libpython3.8-minimal:amd64.
+Preparing to unpack .../02-libpython3.8-minimal_3.8.10-0ubuntu1~20.04.2_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.2) ...
+Selecting previously unselected package libpython3.8-stdlib:amd64.
+Preparing to unpack .../03-libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.2_amd64.deb ...
+Unpacking libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.2) ...
+Selecting previously unselected package xxd.
+Preparing to unpack .../04-xxd_2%3a8.1.2269-1ubuntu5.7_amd64.deb ...
+Unpacking xxd (2:8.1.2269-1ubuntu5.7) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../05-vim-common_2%3a8.1.2269-1ubuntu5.7_all.deb ...
+Unpacking vim-common (2:8.1.2269-1ubuntu5.7) ...
+Selecting previously unselected package alsa-topology-conf.
+Preparing to unpack .../06-alsa-topology-conf_1.2.2-1_all.deb ...
+Unpacking alsa-topology-conf (1.2.2-1) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../07-alsa-ucm-conf_1.2.2-1ubuntu0.11_all.deb ...
+Unpacking alsa-ucm-conf (1.2.2-1ubuntu0.11) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../08-libasound2-data_1.2.2-2.1ubuntu2.5_all.deb ...
+Unpacking libasound2-data (1.2.2-2.1ubuntu2.5) ...
+Selecting previously unselected package libasound2:amd64.
+Preparing to unpack .../09-libasound2_1.2.2-2.1ubuntu2.5_amd64.deb ...
+Unpacking libasound2:amd64 (1.2.2-2.1ubuntu2.5) ...
+Selecting previously unselected package libltdl7:amd64.
+Preparing to unpack .../10-libltdl7_2.4.6-14_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.6-14) ...
+Selecting previously unselected package libtdb1:amd64.
+Preparing to unpack .../11-libtdb1_1.4.3-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libtdb1:amd64 (1.4.3-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libogg0:amd64.
+Preparing to unpack .../12-libogg0_1.3.4-0ubuntu1_amd64.deb ...
+Unpacking libogg0:amd64 (1.3.4-0ubuntu1) ...
+Selecting previously unselected package libvorbis0a:amd64.
+Preparing to unpack .../13-libvorbis0a_1.3.6-2ubuntu1_amd64.deb ...
+Unpacking libvorbis0a:amd64 (1.3.6-2ubuntu1) ...
+Selecting previously unselected package libvorbisfile3:amd64.
+Preparing to unpack .../14-libvorbisfile3_1.3.6-2ubuntu1_amd64.deb ...
+Unpacking libvorbisfile3:amd64 (1.3.6-2ubuntu1) ...
+Selecting previously unselected package sound-theme-freedesktop.
+Preparing to unpack .../15-sound-theme-freedesktop_0.8-2ubuntu1_all.deb ...
+Unpacking sound-theme-freedesktop (0.8-2ubuntu1) ...
+Selecting previously unselected package libcanberra0:amd64.
+Preparing to unpack .../16-libcanberra0_0.30-7ubuntu1_amd64.deb ...
+Unpacking libcanberra0:amd64 (0.30-7ubuntu1) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../17-libgpm2_1.20.7-5_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-5) ...
+Selecting previously unselected package libpython3.8:amd64.
+Preparing to unpack .../18-libpython3.8_3.8.10-0ubuntu1~20.04.2_amd64.deb ...
+Unpacking libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.2) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../19-vim-runtime_2%3a8.1.2269-1ubuntu5.7_all.deb ...
+Adding 'diversion of /usr/share/vim/vim81/doc/help.txt to /usr/share/vim/vim81/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim81/doc/tags to /usr/share/vim/vim81/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:8.1.2269-1ubuntu5.7) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../20-vim_2%3a8.1.2269-1ubuntu5.7_amd64.deb ...
+Unpacking vim (2:8.1.2269-1ubuntu5.7) ...
+Setting up libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.2) ...
+Setting up libgpm2:amd64 (1.20.7-5) ...
+Setting up libogg0:amd64 (1.3.4-0ubuntu1) ...
+Setting up alsa-ucm-conf (1.2.2-1ubuntu0.11) ...
+Setting up libtdb1:amd64 (1.4.3-0ubuntu0.20.04.1) ...
+Setting up less (551-1ubuntu0.1) ...
+Setting up xxd (2:8.1.2269-1ubuntu5.7) ...
+Setting up libasound2-data (1.2.2-2.1ubuntu2.5) ...
+Setting up vim-common (2:8.1.2269-1ubuntu5.7) ...
+Setting up libvorbis0a:amd64 (1.3.6-2ubuntu1) ...
+Setting up libltdl7:amd64 (2.4.6-14) ...
+Setting up alsa-topology-conf (1.2.2-1) ...
+Setting up sound-theme-freedesktop (0.8-2ubuntu1) ...
+Setting up libasound2:amd64 (1.2.2-2.1ubuntu2.5) ...
+Setting up libmpdec2:amd64 (2.4.2-3) ...
+Setting up vim-runtime (2:8.1.2269-1ubuntu5.7) ...
+Setting up libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.2) ...
+Setting up libvorbisfile3:amd64 (1.3.6-2ubuntu1) ...
+Setting up libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.2) ...
+Setting up libcanberra0:amd64 (0.30-7ubuntu1) ...
+Setting up vim (2:8.1.2269-1ubuntu5.7) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+ ---> 8971d5c014ab
+Removing intermediate container 22ce6bd19acf
+Step 3/4 : RUN python3 -m pip -V  && python3 -m pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install py4j -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install pandas-profiling -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install statsmodels -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install ggplot -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install bokeh -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install pyfasta -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install pdoc3 -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install biopython -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install fastinterval -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install matplotlib-venn -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install h5py -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install html5lib -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install pytz -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install pyvcf -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install theano -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install mkl -i https://pypi.tuna.tsinghua.edu.cn/simple && python3 -m pip install readline  && rm -rf /root/.cache/pip/wheels/*
+ ---> Running in 3c926432f972
+
+[91m[0mpip 21.3.1 from /opt/conda/lib/python3.9/site-packages/pip (python 3.9)
+[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting numpy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fb/65/d5d8303c7dd6a46964cc360e6d95137821493bbd7e4644165afdac13149e/numpy-1.22.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+Installing collected packages: numpy
+Successfully installed numpy-1.22.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting py4j
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5e/e6/68db58a1d94d41ae042400f7965ed6a2c30e4108f77b54672d6451f86ebd/py4j-0.10.9.3-py2.py3-none-any.whl (198 kB)
+Installing collected packages: py4j
+Successfully installed py4j-0.10.9.3
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting matplotlib
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6a/52/703f568256a3e614a448503a698557d7832b7893fd63d3f7c2ebb54cd6e2/matplotlib-3.5.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl (11.2 MB)
+Collecting pillow>=6.2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f3/3b/d7bb231b3bc1414252e77463dc63554c1aeccffe0798524467aca7bad089/Pillow-9.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+Collecting cycler>=0.10
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5c/f9/695d6bedebd747e5eb0fe8fad57b72fdf25411273a39791cde838d5a8f51/cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib) (21.2)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.9/site-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: numpy>=1.17 in /opt/conda/lib/python3.9/site-packages (from matplotlib) (1.22.2)
+Collecting kiwisolver>=1.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1f/99/58fe27c8e4a3de823f9fc28ab2c415347efc4139f1c85cac65a008007210/kiwisolver-1.3.2-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Collecting fonttools>=4.22.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1d/46/65a58d7b92905e2767000b3f6eb1d0301e9ed7d459d14461075c1db63349/fonttools-4.29.1-py3-none-any.whl (895 kB)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib) (2.4.7)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib) (1.16.0)
+Installing collected packages: pillow, kiwisolver, fonttools, cycler, matplotlib
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0mSuccessfully installed cycler-0.11.0 fonttools-4.29.1 kiwisolver-1.3.2 matplotlib-3.5.1 pillow-9.0.1
+[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting pandas
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8e/2f/192279e11738420be0fe0907d8751181f77c28ca59b6c29fac1f0d34e2e3/pandas-1.4.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+Requirement already satisfied: numpy>=1.18.5 in /opt/conda/lib/python3.9/site-packages (from pandas) (1.22.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.9/site-packages (from pandas) (2021.3)
+Requirement already satisfied: python-dateutil>=2.8.1 in /opt/conda/lib/python3.9/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil>=2.8.1->pandas) (1.16.0)
+Installing collected packages: pandas
+Successfully installed pandas-1.4.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting pandas-profiling
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b8/bb/7d1a8523711c7022601d17a8449b822dc5ffaf272692d3538771b0538631/pandas_profiling-3.1.0-py2.py3-none-any.whl (261 kB)
+Collecting htmlmin>=0.1.12
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b3/e7/fcd59e12169de19f0131ff2812077f964c6b960e7c09804d30a7bf2ab461/htmlmin-0.1.12.tar.gz (19 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting missingno>=0.4.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d8/c2/b407dce6b18d44f52173f6921d62f326e1329dd6d82fa03b380a14612e4c/missingno-0.5.0-py3-none-any.whl (8.8 kB)
+Requirement already satisfied: requests>=2.24.0 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (2.26.0)
+Collecting joblib~=1.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/55/85/70c6602b078bd9e6f3da4f467047e906525c355a4dacd4f71b97a35d9897/joblib-1.0.1-py3-none-any.whl (303 kB)
+Collecting visions[type_image_path]==0.7.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/66/00/166b2beb8046f06b77a2bf2c1dafeb52eff608f7dd420c767d5f3ce36ef5/visions-0.7.4-py3-none-any.whl (102 kB)
+Collecting pydantic>=1.8.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/55/b1/4553b708458d8b909b33f4a57a09aa552921d9c25d37ababdb5d48cd7e85/pydantic-1.9.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+Collecting scipy>=1.4.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b8/51/6a058c1c742c8365399c93685a5b3c4f9c39389957189725738954c427a0/scipy-1.8.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.1 MB)
+Requirement already satisfied: numpy>=1.16.0 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (1.22.2)
+Requirement already satisfied: matplotlib>=3.2.0 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (3.5.1)
+Requirement already satisfied: tqdm>=4.48.2 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (4.62.3)
+Requirement already satisfied: pandas!=1.0.0,!=1.0.1,!=1.0.2,!=1.1.0,>=0.25.3 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (1.4.1)
+Collecting PyYAML>=5.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/12/fc/a4d5a7554e0067677823f7265cb3ae22aed8a238560b5133b58cda252dad/PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (661 kB)
+Collecting phik>=0.11.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a9/b5/47d053f92eb072b231150f18a3081985ad8d84d6521234e79a428e6a7434/phik-0.12.0-cp39-cp39-manylinux2010_x86_64.whl (676 kB)
+Collecting seaborn>=0.10.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/10/5b/0479d7d845b5ba410ca702ffcd7f2cd95a14a4dfff1fde2637802b258b9b/seaborn-0.11.2-py3-none-any.whl (292 kB)
+Collecting tangled-up-in-unicode==0.1.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/93/3e/cb354fb2097fcf2fd5b5a342b10ae2a6e9363ba435b64e3e00c414064bc7/tangled_up_in_unicode-0.1.0-py3-none-any.whl (3.1 MB)
+Collecting multimethod>=1.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e7/c7/5bf64fed1c1c8a39214ba6331ed62219faf760a7e26acf914f6a6a53936a/multimethod-1.7-py3-none-any.whl (9.5 kB)
+Requirement already satisfied: jinja2>=2.11.1 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (3.0.2)
+Requirement already satisfied: markupsafe~=2.0.1 in /opt/conda/lib/python3.9/site-packages (from pandas-profiling) (2.0.1)
+Requirement already satisfied: attrs>=19.3.0 in /opt/conda/lib/python3.9/site-packages (from visions[type_image_path]==0.7.4->pandas-profiling) (21.2.0)
+Collecting networkx>=2.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e9/93/aa6613aa70d6eb4868e667068b5a11feca9645498fd31b954b6c4bb82fa5/networkx-2.6.3-py3-none-any.whl (1.9 MB)
+Collecting imagehash
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ef/bb/612c6ef49a57acf2af6cfd928b8913dea2837bd96cc0d8ef6ec8d2014158/ImageHash-4.2.1.tar.gz (812 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: Pillow in /opt/conda/lib/python3.9/site-packages (from visions[type_image_path]==0.7.4->pandas-profiling) (9.0.1)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.2.0->pandas-profiling) (21.2)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.2.0->pandas-profiling) (4.29.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.2.0->pandas-profiling) (1.3.2)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.2.0->pandas-profiling) (2.4.7)
+Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.2.0->pandas-profiling) (0.11.0)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.2.0->pandas-profiling) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.9/site-packages (from pandas!=1.0.0,!=1.0.1,!=1.0.2,!=1.1.0,>=0.25.3->pandas-profiling) (2021.3)
+Collecting typing-extensions>=3.7.4.3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/lib/python3.9/site-packages (from requests>=2.24.0->pandas-profiling) (2.0.0)
+Requirement already satisfied: idna<4,>=2.5 in /opt/conda/lib/python3.9/site-packages (from requests>=2.24.0->pandas-profiling) (3.1)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.9/site-packages (from requests>=2.24.0->pandas-profiling) (2021.10.8)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/conda/lib/python3.9/site-packages (from requests>=2.24.0->pandas-profiling) (1.26.7)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib>=3.2.0->pandas-profiling) (1.16.0)
+Collecting PyWavelets
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/01/7b/7759b36daf466ee7dfbbb913a3ad5c9f5315a2bb6bdbb955203c727eab36/PyWavelets-1.2.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.6 MB)
+Building wheels for collected packages: htmlmin, imagehash
+  Building wheel for htmlmin (setup.py): started
+  Building wheel for htmlmin (setup.py): finished with status 'done'
+  Created wheel for htmlmin: filename=htmlmin-0.1.12-py3-none-any.whl size=27098 sha256=7bc74ec36a96468677eb7095fe42095596d269c623dd390fcb70f00b7df38d02
+  Stored in directory: /tmp/pip-ephem-wheel-cache-81lf85ob/wheels/9b/33/0f/047509074030c21f29e101f59f8c504cc2470379a87adce7db
+  Building wheel for imagehash (setup.py): started
+  Building wheel for imagehash (setup.py): finished with status 'done'
+  Created wheel for imagehash: filename=ImageHash-4.2.1-py2.py3-none-any.whl size=295207 sha256=c99af70832f16c2a43c517af1d708d83a9d0eedacb93687e2e48b0616017837e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-81lf85ob/wheels/57/bd/e3/41b0c20b95b36273ad5ebbfbc289226e88f5d3acf2170404f5
+Successfully built htmlmin imagehash
+Installing collected packages: tangled-up-in-unicode, scipy, PyWavelets, networkx, multimethod, visions, typing-extensions, seaborn, joblib, imagehash, PyYAML, pydantic, phik, missingno, htmlmin, pandas-profiling
+Successfully installed PyWavelets-1.2.0 PyYAML-6.0 htmlmin-0.1.12 imagehash-4.2.1 joblib-1.0.1 missingno-0.5.0 multimethod-1.7 networkx-2.6.3 pandas-profiling-3.1.0 phik-0.12.0 pydantic-1.9.0 scipy-1.8.0 seaborn-0.11.2 tangled-up-in-unicode-0.1.0 typing-extensions-4.1.1 visions-0.7.4
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting statsmodels
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/46/ef/bd00681d8e3e41ec5deaaa299b614e15f4fec339cbbb6a6cf07d8cf5ce30/statsmodels-0.13.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.9 MB)
+Collecting patsy>=0.5.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/87/7f/d37cd027c25145eeba92b1a756976931c831803d92547c8637a3400c339f/patsy-0.5.2-py2.py3-none-any.whl (233 kB)
+Collecting packaging>=21.3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl (40 kB)
+Requirement already satisfied: scipy>=1.3 in /opt/conda/lib/python3.9/site-packages (from statsmodels) (1.8.0)
+Requirement already satisfied: numpy>=1.17 in /opt/conda/lib/python3.9/site-packages (from statsmodels) (1.22.2)
+Requirement already satisfied: pandas>=0.25 in /opt/conda/lib/python3.9/site-packages (from statsmodels) (1.4.1)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /opt/conda/lib/python3.9/site-packages (from packaging>=21.3->statsmodels) (2.4.7)
+Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.9/site-packages (from pandas>=0.25->statsmodels) (2021.3)
+Requirement already satisfied: python-dateutil>=2.8.1 in /opt/conda/lib/python3.9/site-packages (from pandas>=0.25->statsmodels) (2.8.2)
+Requirement already satisfied: six in /opt/conda/lib/python3.9/site-packages (from patsy>=0.5.2->statsmodels) (1.16.0)
+Installing collected packages: patsy, packaging, statsmodels
+  Attempting uninstall: packaging
+    Found existing installation: packaging 21.2
+    Uninstalling packaging-21.2:
+      Successfully uninstalled packaging-21.2
+Successfully installed packaging-21.3 patsy-0.5.2 statsmodels-0.13.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting ggplot
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/48/04/5c88cc51c6713583f2dc78a5296adb9741505348c323d5875bc976143db2/ggplot-0.11.5-py2.py3-none-any.whl (2.2 MB)
+Requirement already satisfied: cycler in /opt/conda/lib/python3.9/site-packages (from ggplot) (0.11.0)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.9/site-packages (from ggplot) (1.22.2)
+Collecting brewer2mpl
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/84/57/00c45a199719e617db0875181134fcb3aeef701deae346547ac722eaaf5e/brewer2mpl-1.4.1-py2.py3-none-any.whl (24 kB)
+Requirement already satisfied: scipy in /opt/conda/lib/python3.9/site-packages (from ggplot) (1.8.0)
+Requirement already satisfied: patsy>=0.4 in /opt/conda/lib/python3.9/site-packages (from ggplot) (0.5.2)
+Requirement already satisfied: pandas in /opt/conda/lib/python3.9/site-packages (from ggplot) (1.4.1)
+Requirement already satisfied: matplotlib in /opt/conda/lib/python3.9/site-packages (from ggplot) (3.5.1)
+Requirement already satisfied: six in /opt/conda/lib/python3.9/site-packages (from ggplot) (1.16.0)
+Requirement already satisfied: statsmodels in /opt/conda/lib/python3.9/site-packages (from ggplot) (0.13.2)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.9/site-packages (from matplotlib->ggplot) (2.8.2)
+Requirement already satisfied: pillow>=6.2.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib->ggplot) (9.0.1)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib->ggplot) (2.4.7)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib->ggplot) (1.3.2)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib->ggplot) (21.3)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib->ggplot) (4.29.1)
+Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.9/site-packages (from pandas->ggplot) (2021.3)
+Installing collected packages: brewer2mpl, ggplot
+Successfully installed brewer2mpl-1.4.1 ggplot-0.11.5
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting bokeh
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/87/6c/c2b2911555d34c9fa24ad0f41cf42ba6887e279a521bca0cb3d091d77c17/bokeh-2.4.2-py3-none-any.whl (18.5 MB)
+Requirement already satisfied: typing-extensions>=3.10.0 in /opt/conda/lib/python3.9/site-packages (from bokeh) (4.1.1)
+Requirement already satisfied: PyYAML>=3.10 in /opt/conda/lib/python3.9/site-packages (from bokeh) (6.0)
+Requirement already satisfied: packaging>=16.8 in /opt/conda/lib/python3.9/site-packages (from bokeh) (21.3)
+Requirement already satisfied: numpy>=1.11.3 in /opt/conda/lib/python3.9/site-packages (from bokeh) (1.22.2)
+Requirement already satisfied: pillow>=7.1.0 in /opt/conda/lib/python3.9/site-packages (from bokeh) (9.0.1)
+Requirement already satisfied: tornado>=5.1 in /opt/conda/lib/python3.9/site-packages (from bokeh) (6.1)
+Requirement already satisfied: Jinja2>=2.9 in /opt/conda/lib/python3.9/site-packages (from bokeh) (3.0.2)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/conda/lib/python3.9/site-packages (from Jinja2>=2.9->bokeh) (2.0.1)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /opt/conda/lib/python3.9/site-packages (from packaging>=16.8->bokeh) (2.4.7)
+Installing collected packages: bokeh
+Successfully installed bokeh-2.4.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting pyfasta
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/be/3f/794fbcdaaa2113f0a1d16a962463896c1a6bdab77bd63f33a8f16aae6cdc/pyfasta-0.5.2.tar.gz (19 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: pyfasta
+  Building wheel for pyfasta (setup.py): started
+  Building wheel for pyfasta (setup.py): finished with status 'done'
+  Created wheel for pyfasta: filename=pyfasta-0.5.2-py3-none-any.whl size=14236 sha256=7285d1c34e520e12f53304776c38529ed55b088bc763b7fc130d260a85c2b591
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k8hhujeq/wheels/f2/06/5e/696e167b8526562da78c66790cb1f91530c1376d3e677aea6e
+Successfully built pyfasta
+Installing collected packages: pyfasta
+Successfully installed pyfasta-0.5.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting pdoc3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/67/36/add16f4705689ed1f31aba24c973d035fc953c6fe54af9143837cc3b1315/pdoc3-0.10.0-py3-none-any.whl (135 kB)
+Collecting markdown>=3.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9f/d4/2c7f83915d437736996b2674300c6c4b578a6f897f34e40f5c04db146719/Markdown-3.3.6-py3-none-any.whl (97 kB)
+Requirement already satisfied: mako in /opt/conda/lib/python3.9/site-packages (from pdoc3) (1.1.5)
+Requirement already satisfied: importlib-metadata>=4.4 in /opt/conda/lib/python3.9/site-packages (from markdown>=3.0->pdoc3) (4.8.1)
+Requirement already satisfied: MarkupSafe>=0.9.2 in /opt/conda/lib/python3.9/site-packages (from mako->pdoc3) (2.0.1)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.9/site-packages (from importlib-metadata>=4.4->markdown>=3.0->pdoc3) (3.6.0)
+Installing collected packages: markdown, pdoc3
+Successfully installed markdown-3.3.6 pdoc3-0.10.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting biopython
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/10/4f/1369f4a2840fdd37402935a59455f0c86a5abfcfdfae37365d8be925661c/biopython-1.79-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl (2.3 MB)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.9/site-packages (from biopython) (1.22.2)
+Installing collected packages: biopython
+Successfully installed biopython-1.79
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting fastinterval
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a3/84/839f4589a1af516133d284e851ff6132ffe34a48e151673e418e6e1985af/fastinterval-0.1.1.tar.gz (4.9 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: numpy in /opt/conda/lib/python3.9/site-packages (from fastinterval) (1.22.2)
+Requirement already satisfied: pyfasta in /opt/conda/lib/python3.9/site-packages (from fastinterval) (0.5.2)
+Collecting bx-python
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e3/3b/6bace6c4c80fed6bea6dfdbc2ad433cfadd00f15e11794e54eb59dbc481a/bx_python-0.8.13-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+Building wheels for collected packages: fastinterval
+  Building wheel for fastinterval (setup.py): started
+  Building wheel for fastinterval (setup.py): finished with status 'done'
+  Created wheel for fastinterval: filename=fastinterval-0.1.1-py3-none-any.whl size=5127 sha256=96b732350a08801e8cb1dcfd7661da0915d34c6b782e396c5fd7e4ab6f677817
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k8qs8stl/wheels/67/7c/9e/ff0498a3d94d7603eb3edf8fed5852b186f37e6677f8c2fd7c
+Successfully built fastinterval
+Installing collected packages: bx-python, fastinterval
+Successfully installed bx-python-0.8.13 fastinterval-0.1.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting matplotlib-venn
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ca/e8/53441d7feb29ab10de3bd46c05358c41f0ba2f57395e88ffbb62d6b69df3/matplotlib-venn-0.11.6.tar.gz (29 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: matplotlib in /opt/conda/lib/python3.9/site-packages (from matplotlib-venn) (3.5.1)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.9/site-packages (from matplotlib-venn) (1.22.2)
+Requirement already satisfied: scipy in /opt/conda/lib/python3.9/site-packages (from matplotlib-venn) (1.8.0)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (2.8.2)
+Requirement already satisfied: pillow>=6.2.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (9.0.1)
+Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (0.11.0)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (2.4.7)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (4.29.1)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib->matplotlib-venn) (21.3)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn) (1.16.0)
+Building wheels for collected packages: matplotlib-venn
+  Building wheel for matplotlib-venn (setup.py): started
+  Building wheel for matplotlib-venn (setup.py): finished with status 'done'
+  Created wheel for matplotlib-venn: filename=matplotlib_venn-0.11.6-py3-none-any.whl size=32065 sha256=0a38c19aeac0be9c4498baa4000596afe53f7ba2f6d93af7ad2961a362a518e7
+  Stored in directory: /tmp/pip-ephem-wheel-cache-66ppju30/wheels/03/5d/f8/9a9720bce51dc43f20f212446b6098822bdea5db15f5feda92
+Successfully built matplotlib-venn
+Installing collected packages: matplotlib-venn
+Successfully installed matplotlib-venn-0.11.6
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting h5py
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/07/1f/590ea41884f1b8bb38b41a704fde808c4276a580e42b46c97390bd4cb1c0/h5py-3.6.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (4.5 MB)
+Requirement already satisfied: numpy>=1.14.5 in /opt/conda/lib/python3.9/site-packages (from h5py) (1.22.2)
+Installing collected packages: h5py
+Successfully installed h5py-3.6.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting html5lib
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6c/dd/a834df6482147d48e225a49515aabc28974ad5a4ca3215c18a882565b028/html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.9/site-packages (from html5lib) (0.5.1)
+Requirement already satisfied: six>=1.9 in /opt/conda/lib/python3.9/site-packages (from html5lib) (1.16.0)
+Installing collected packages: html5lib
+Successfully installed html5lib-1.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Requirement already satisfied: pytz in /opt/conda/lib/python3.9/site-packages (2021.3)
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting pyvcf
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/20/b6/36bfb1760f6983788d916096193fc14c83cce512c7787c93380e09458c09/PyVCF-0.6.8.tar.gz (34 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_f15c8bac0fda4e23932964325b1db688/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_f15c8bac0fda4e23932964325b1db688/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-jv4067wo
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_f15c8bac0fda4e23932964325b1db688/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/20/b6/36bfb1760f6983788d916096193fc14c83cce512c7787c93380e09458c09/PyVCF-0.6.8.tar.gz#sha256=e9d872513d179d229ab61da47a33f42726e9613784d1cb2bac3f8e2642f6f9d9 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/64/1b/7c393d0cd5b1de2bb025d6ef45f71a013258214ae3564ede54adbd74ad00/PyVCF-0.6.7.tar.gz (31 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_c6a8b2abef424730b13f29238fb00bcf/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_c6a8b2abef424730b13f29238fb00bcf/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-li8t58bb
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_c6a8b2abef424730b13f29238fb00bcf/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/64/1b/7c393d0cd5b1de2bb025d6ef45f71a013258214ae3564ede54adbd74ad00/PyVCF-0.6.7.tar.gz#sha256=998361f824f828f689e8e1043f795403c11e561d719cc85cdd17c3679fa9b4aa (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f7/b5/0c1763caa7502b71b43ef486211230fb6bfe30568b01594859150d5b2339/PyVCF-0.6.6.tar.gz (30 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_0be1b9fb2db04977b73417bcfa0fe06c/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_0be1b9fb2db04977b73417bcfa0fe06c/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-r67t6eba
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_0be1b9fb2db04977b73417bcfa0fe06c/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/f7/b5/0c1763caa7502b71b43ef486211230fb6bfe30568b01594859150d5b2339/PyVCF-0.6.6.tar.gz#sha256=d0517b0ebd41a4064aa4cc6545617597d84ef7772c96713c170f39b68a997186 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/10/a7/f97d71cf4b0a22a2adc55564b3dab6bf1a90ef6592ad2db0c5b8a58c5e0a/PyVCF-0.6.5.tar.gz (30 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_326377ea905b471690acb3c0c994c481/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_326377ea905b471690acb3c0c994c481/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-7ild_fh6
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_326377ea905b471690acb3c0c994c481/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/10/a7/f97d71cf4b0a22a2adc55564b3dab6bf1a90ef6592ad2db0c5b8a58c5e0a/PyVCF-0.6.5.tar.gz#sha256=458b012fe69842acd49d87913f1eb068696c01b03aea7c04d6b8e14f13872c13 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/30/db/fd30981c363499c9b51687b7d06e891937c3136073b5771b2e30c0453aae/PyVCF-0.6.4.tar.gz (29 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_8e23676d79084f3b817aad2870032f45/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_8e23676d79084f3b817aad2870032f45/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-3c7y50jy
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_8e23676d79084f3b817aad2870032f45/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/30/db/fd30981c363499c9b51687b7d06e891937c3136073b5771b2e30c0453aae/PyVCF-0.6.4.tar.gz#sha256=10aef49ed2a4de7a64d51d92dd30441d350b24619f328d879cbd86611031b18a (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/38/3a/a3b7a9b36cd2d8aedbe1335887c50441b942cb3e990def4b327f1ee21147/PyVCF-0.6.3.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_8128b2f1369a43dca1761ce2c3a8232b/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_8128b2f1369a43dca1761ce2c3a8232b/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-hth7o2w8
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_8128b2f1369a43dca1761ce2c3a8232b/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/38/3a/a3b7a9b36cd2d8aedbe1335887c50441b942cb3e990def4b327f1ee21147/PyVCF-0.6.3.tar.gz#sha256=44b6f753472b2f9b2c5e3f08959d1f6532076fcf83223f3797256ac7b8ede60d (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/73/4b/2bbb1ee971de3d6b516ba4dc152027488fe6f15fc396620881750a9b51d0/PyVCF-0.6.2.tar.gz (26 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_80b48068624542dcac1bcf69b5a6d884/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_80b48068624542dcac1bcf69b5a6d884/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-ehg9ui3j
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_80b48068624542dcac1bcf69b5a6d884/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/73/4b/2bbb1ee971de3d6b516ba4dc152027488fe6f15fc396620881750a9b51d0/PyVCF-0.6.2.tar.gz#sha256=aebd8dc67ea92d307976ae73ed0add8d9e1b6c7e09343decfa960e0e597f28b1 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6f/49/e46405959069b27ee605f7646e7ec7d5c220e981a11fa8a76f28bb5dee17/PyVCF-0.6.1.tar.gz (26 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_90efd0ccc702412f82b0b9a9dbe5f71e/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_90efd0ccc702412f82b0b9a9dbe5f71e/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-66cguizo
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_90efd0ccc702412f82b0b9a9dbe5f71e/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/6f/49/e46405959069b27ee605f7646e7ec7d5c220e981a11fa8a76f28bb5dee17/PyVCF-0.6.1.tar.gz#sha256=41e0369cc7852011f4fb277e2b5282439715d6edde2ee9cdde0e1262e78b2389 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/4e/ae/b43f6a7dca99957ebee1d0944213a6a1490595e04aa4ad95fb25c69dbcd9/PyVCF-0.6.0.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_70163252d2ba47e48cf75ed902096812/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_70163252d2ba47e48cf75ed902096812/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-xehl0by7
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_70163252d2ba47e48cf75ed902096812/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/4e/ae/b43f6a7dca99957ebee1d0944213a6a1490595e04aa4ad95fb25c69dbcd9/PyVCF-0.6.0.tar.gz#sha256=d9ec3bbedb64fa35c2648a9c41fdefaedd3912ff597a436e073d27aeccf5de7c (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/db/4c/b2c4f3f1eba4913dc531e0b5d27a1219f3edd767007f1a02f753207e1647/PyVCF-0.5.0.tar.gz (23 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_fbe996a6a1994e5cb84e848b04d40e35/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_fbe996a6a1994e5cb84e848b04d40e35/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-c9fu6_8j
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_fbe996a6a1994e5cb84e848b04d40e35/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/db/4c/b2c4f3f1eba4913dc531e0b5d27a1219f3edd767007f1a02f753207e1647/PyVCF-0.5.0.tar.gz#sha256=51cc9ffea4f1e9ae2095d41abd371afe4581b4c7203094f7647e7a2a071e50c9 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ca/25/bfe4a71b1f65d0bcd3e7353c26a35fce513bd8c0f5e1dfce9d42d2f37c27/PyVCF-0.4.6.tar.gz (19 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_d1a9f4f95a17465e844e40e4a9a5e3ac/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_d1a9f4f95a17465e844e40e4a9a5e3ac/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-u_tuija4
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_d1a9f4f95a17465e844e40e4a9a5e3ac/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/ca/25/bfe4a71b1f65d0bcd3e7353c26a35fce513bd8c0f5e1dfce9d42d2f37c27/PyVCF-0.4.6.tar.gz#sha256=6e41ba239b2644664bf4c64a2638ca4870afb144ff5891a1fd37ad2adad79e40 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8f/c4/e1c71b3e00d2c2a5149933558e088e3a42a27b94620f47f5b2cb861642a8/PyVCF-0.4.5.tar.gz (19 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_752be5b58f2d452a84de15738abe0b6f/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_752be5b58f2d452a84de15738abe0b6f/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-x5ss46ka
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_752be5b58f2d452a84de15738abe0b6f/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/8f/c4/e1c71b3e00d2c2a5149933558e088e3a42a27b94620f47f5b2cb861642a8/PyVCF-0.4.5.tar.gz#sha256=4c7367d3a55d7ba8c404241b12cbdf011b5fa7a95034a1c779489523292a2d47 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e3/38/e1b52283c76ef5ef2fc4a5e005bfd308ff14be5483f09b2e5268bd06ae9d/PyVCF-0.4.4.tar.gz (19 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+[91m  ERROR: Command errored out with exit status 1:
+   command: /opt/conda/bin/python3 -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-t_ldazam/pyvcf_1a2cf5d90df9465cb61f7910ea55a98a/setup.py'"'"'; __file__='"'"'/tmp/pip-install-t_ldazam/pyvcf_1a2cf5d90df9465cb61f7910ea55a98a/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-5qlpnb5o
+       cwd: /tmp/pip-install-t_ldazam/pyvcf_1a2cf5d90df9465cb61f7910ea55a98a/
+  Complete output (1 lines):
+  error in PyVCF setup command: use_2to3 is invalid.
+  ----------------------------------------
+[0m[91mWARNING: Discarding https://pypi.tuna.tsinghua.edu.cn/packages/e3/38/e1b52283c76ef5ef2fc4a5e005bfd308ff14be5483f09b2e5268bd06ae9d/PyVCF-0.4.4.tar.gz#sha256=4576d8a46958fc51a0c100ee0c8aa768e6d8a7fb84706a97a1fbdebd97f49e70 (from https://pypi.tuna.tsinghua.edu.cn/simple/pyvcf/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+[0m  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a2/48/96cec034b31c55c84deaa7d9e605fd6eb192f1f8890af6196dd6591e3c34/PyVCF-0.4.3.tar.gz (17 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: pyvcf
+  Building wheel for pyvcf (setup.py): started
+  Building wheel for pyvcf (setup.py): finished with status 'done'
+  Created wheel for pyvcf: filename=PyVCF-0.4.3-py3-none-any.whl size=16158 sha256=96d17f3a318a6e91cd76b19f0b2450e900cdd2d5fdccb0fdc3d29a9a2d676bba
+  Stored in directory: /tmp/pip-ephem-wheel-cache-jy6jbkmt/wheels/a6/6f/d3/e97ae33217d0549649fba91b7daa3504ee4b916468e30a51da
+Successfully built pyvcf
+Installing collected packages: pyvcf
+Successfully installed pyvcf-0.4.3
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting theano
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6b/97/bcd5654ba60f35f180931afabbd3b4c46c0379852f961c7a2819ff897f5d/Theano-1.0.5.tar.gz (2.8 MB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: numpy>=1.9.1 in /opt/conda/lib/python3.9/site-packages (from theano) (1.22.2)
+Requirement already satisfied: scipy>=0.14 in /opt/conda/lib/python3.9/site-packages (from theano) (1.8.0)
+Requirement already satisfied: six>=1.9.0 in /opt/conda/lib/python3.9/site-packages (from theano) (1.16.0)
+Building wheels for collected packages: theano
+  Building wheel for theano (setup.py): started
+  Building wheel for theano (setup.py): finished with status 'done'
+  Created wheel for theano: filename=Theano-1.0.5-py3-none-any.whl size=2668111 sha256=cb35f8c7e145586dbb44cac1cead2f1c483445a4503c789e519fccc9af8a3bd3
+  Stored in directory: /tmp/pip-ephem-wheel-cache-8a7378n5/wheels/0f/0a/62/44dba2a842ae1ea9a052bf9803bf3997e4f12659fd46a88a70
+Successfully built theano
+Installing collected packages: theano
+Successfully installed theano-1.0.5
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting mkl
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/77/99/655f03109d3fbc6aa70da25e2d824ada9c26d9d64762bb65dc03cf63a3f7/mkl-2022.0.2-py2.py3-none-manylinux1_x86_64.whl (256.0 MB)
+Collecting tbb==2021.*
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e5/d5/4db63b275cff517522e4e5c4653bfd02d03c39782cba560c780133551f90/tbb-2021.5.1-py2.py3-none-manylinux1_x86_64.whl (4.0 MB)
+Collecting intel-openmp==2022.*
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ce/34/6ed591e7abf65ca8d23e9b5912b8acc3c7a86be88e67ce5941b05dda2e00/intel_openmp-2022.0.2-py2.py3-none-manylinux1_x86_64.whl (9.7 MB)
+Installing collected packages: tbb, intel-openmp, mkl
+Successfully installed intel-openmp-2022.0.2 mkl-2022.0.2 tbb-2021.5.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mCollecting readline
+  Downloading readline-6.2.4.1.tar.gz (2.3 MB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: readline
+  Building wheel for readline (setup.py): started
+  Building wheel for readline (setup.py): finished with status 'done'
+  Created wheel for readline: filename=readline-6.2.4.1-cp39-cp39-linux_x86_64.whl size=373988 sha256=3e13cb362ba1558fd5067ea74711a7cbf3d0d26ca84f93088143eaa8db564b3d
+  Stored in directory: /tmp/pip-ephem-wheel-cache-kytiv3ho/wheels/53/99/b3/17d6d707b47e9164542581c64d56ebe03e393070dec328d754
+Successfully built readline
+Installing collected packages: readline
+Successfully installed readline-6.2.4.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m ---> 9e8b6cb3ef43
+Removing intermediate container 3c926432f972
+Step 4/4 : RUN python3 -m pip install scanpy -i https://pypi.tuna.tsinghua.edu.cn/simple
+ ---> Running in c66620c37cd7
+
+[91m[0m[91mWARNING: The directory '/home/jovyan/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[0mLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting scanpy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/25/7d/2975f73977fdee9133fc7660f4ce825603c98e91e010828cb1125999cff2/scanpy-1.8.2-py3-none-any.whl (2.0 MB)
+Requirement already satisfied: numpy>=1.17.0 in /opt/conda/lib/python3.9/site-packages (from scanpy) (1.22.2)
+Requirement already satisfied: joblib in /opt/conda/lib/python3.9/site-packages (from scanpy) (1.0.1)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.9/site-packages (from scanpy) (21.3)
+Requirement already satisfied: matplotlib>=3.1.2 in /opt/conda/lib/python3.9/site-packages (from scanpy) (3.5.1)
+Requirement already satisfied: h5py>=2.10.0 in /opt/conda/lib/python3.9/site-packages (from scanpy) (3.6.0)
+Collecting tables
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/13/af/57ff6f4c6ef21f56d6a226f77d958860fa4911f9b047fe8b7648d51a7e65/tables-3.7.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.9 MB)
+Requirement already satisfied: statsmodels>=0.10.0rc2 in /opt/conda/lib/python3.9/site-packages (from scanpy) (0.13.2)
+Requirement already satisfied: seaborn in /opt/conda/lib/python3.9/site-packages (from scanpy) (0.11.2)
+Requirement already satisfied: patsy in /opt/conda/lib/python3.9/site-packages (from scanpy) (0.5.2)
+Collecting scikit-learn>=0.22
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/57/aa/483fbe6b5314bce2d49801e6cec1f2139a9c220d0d51494788fff47233b3/scikit_learn-1.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.4 MB)
+Requirement already satisfied: networkx>=2.3 in /opt/conda/lib/python3.9/site-packages (from scanpy) (2.6.3)
+Requirement already satisfied: pandas>=0.21 in /opt/conda/lib/python3.9/site-packages (from scanpy) (1.4.1)
+Collecting numba>=0.41.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f9/01/195ca1c808297e98458a946a357bf457e91d4fd92847fba0bedba1d171e1/numba-0.55.1-1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.3 MB)
+Collecting natsort
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a9/76/0f624b7326f4458a249580c55e5654756084ec4572ce37a05f799b96bc24/natsort-8.1.0-py3-none-any.whl (37 kB)
+Collecting sinfo
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/cd/37/3bedd499ae24c765fa2a165f96bb05d86ad0dd40fdf9917adbf80434445a/sinfo-0.3.4.tar.gz (24 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting umap-learn>=0.3.10
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7e/8f/3521bd0ac15c1de51bc8cbe09b3af3ddf51f22fa05da1749a9dec81380a4/umap-learn-0.5.2.tar.gz (86 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting anndata>=0.7.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/76/dc/cec2e749efbb16e77675865518b517ab3f62d00573e36671e4240aa481b7/anndata-0.7.8-py3-none-any.whl (91 kB)
+Requirement already satisfied: scipy>=1.4 in /opt/conda/lib/python3.9/site-packages (from scanpy) (1.8.0)
+Requirement already satisfied: tqdm in /opt/conda/lib/python3.9/site-packages (from scanpy) (4.62.3)
+Collecting xlrd<2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b0/16/63576a1a001752e34bf8ea62e367997530dc553b689356b9879339cf45a4/xlrd-1.2.0-py2.py3-none-any.whl (103 kB)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.1.2->scanpy) (2.8.2)
+Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.1.2->scanpy) (0.11.0)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.1.2->scanpy) (2.4.7)
+Requirement already satisfied: pillow>=6.2.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.1.2->scanpy) (9.0.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.1.2->scanpy) (4.29.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib>=3.1.2->scanpy) (1.3.2)
+Collecting llvmlite<0.39,>=0.38.0rc1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0a/ce/5ceabed00a13b8517ff1fa29b0f5f67638ed18566323721b4e4ed444c5dd/llvmlite-0.38.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+Collecting numpy>=1.17.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f8/cc/038b8277fe977ae1f18d11660386af6093547d6c0bd9a9fadbed4795091a/numpy-1.21.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.9/site-packages (from numba>=0.41.0->scanpy) (58.3.0)
+Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.9/site-packages (from pandas>=0.21->scanpy) (2021.3)
+Collecting threadpoolctl>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/61/cf/6e354304bcb9c6413c4e02a747b600061c21d38ba51e7e544ac7bc66aecc/threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Requirement already satisfied: six in /opt/conda/lib/python3.9/site-packages (from patsy->scanpy) (1.16.0)
+Collecting pynndescent>=0.5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a2/77/c12c52a51eccd460e26b11bd76c6e00793d15eb00e64381ea8b18d0ae9cb/pynndescent-0.5.6.tar.gz (1.1 MB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting stdlib_list
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7a/b1/52f59dcf31ead2f0ceff8976288449608d912972b911f55dff712cef5719/stdlib_list-0.8.0-py3-none-any.whl (63 kB)
+Collecting numexpr>=2.6.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/2d/03/0a9801115f888d9da5b68c7da1833e616abd1a3aa705316aebac6f731801/numexpr-2.8.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (380 kB)
+Building wheels for collected packages: umap-learn, sinfo, pynndescent
+  Building wheel for umap-learn (setup.py): started
+  Building wheel for umap-learn (setup.py): finished with status 'done'
+  Created wheel for umap-learn: filename=umap_learn-0.5.2-py3-none-any.whl size=82709 sha256=f4ecf0bccd43ed8f59ac0e6ed4f78f2c9da7499c7a9531e7a7c2952dc801ea6d
+  Stored in directory: /tmp/pip-ephem-wheel-cache-91fcjlw0/wheels/fd/80/3c/0938940e58c3cc07ec5653d16fa4419a5f6854966331a11301
+  Building wheel for sinfo (setup.py): started
+  Building wheel for sinfo (setup.py): finished with status 'done'
+  Created wheel for sinfo: filename=sinfo-0.3.4-py3-none-any.whl size=7899 sha256=52a4bb2b7185593f28b2de21936593efba5203ed56d194f72a1f4e4b1c22861a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-91fcjlw0/wheels/1a/0e/ea/af0e26a519f3796cd07d887dda63bd546deace7b1a6d4dec22
+  Building wheel for pynndescent (setup.py): started
+  Building wheel for pynndescent (setup.py): finished with status 'done'
+  Created wheel for pynndescent: filename=pynndescent-0.5.6-py3-none-any.whl size=53945 sha256=3bf4964d5ad066f9f30f3633a965d3ac700f96e21c8e2ca92dd6cca333ea3c6e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-91fcjlw0/wheels/98/30/ab/710e4f3bf27d7760ba0d3661c0b88861b69a445b121a462489
+Successfully built umap-learn sinfo pynndescent
+Installing collected packages: numpy, threadpoolctl, llvmlite, scikit-learn, numba, xlrd, stdlib-list, pynndescent, numexpr, natsort, umap-learn, tables, sinfo, anndata, scanpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.22.2
+    Uninstalling numpy-1.22.2:
+      Successfully uninstalled numpy-1.22.2
+Successfully installed anndata-0.7.8 llvmlite-0.38.0 natsort-8.1.0 numba-0.55.1 numexpr-2.8.1 numpy-1.21.5 pynndescent-0.5.6 scanpy-1.8.2 scikit-learn-1.0.2 sinfo-0.3.4 stdlib-list-0.8.0 tables-3.7.0 threadpoolctl-3.1.0 umap-learn-0.5.2 xlrd-1.2.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m ---> 379a1ce9cdec
+Removing intermediate container c66620c37cd7
+Successfully built 379a1ce9cdec
