@@ -11,6 +11,7 @@ Docker，也称为基础映像，就像一台新服务器，预装了分析所�
 
 
 2）新建工作目录；创建 Dockerfile 文件，示例可以参考仓库其他镜像
+
 3）构建镜像
 
 docker build -t repo:tag .
