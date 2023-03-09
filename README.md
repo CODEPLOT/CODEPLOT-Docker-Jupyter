@@ -13,12 +13,12 @@ Docker，也称为基础映像，就像一台新服务器，预装了分析所�
 2）新建工作目录；创建 Dockerfile 文件，示例可以参考仓库其他镜像
 3）构建镜像
 
-docker build -t <repo>:<tag> .
+docker build -t repo:tag .
 命令参数：
   
-<repo>：是存储 Docker 的存储库的名称（可以是现有存储库或将 Docker 推送到 Docker Hub 时创建的存储库的名称）。
+repo：是存储 Docker 的存储库的名称（可以是现有存储库或将 Docker 推送到 Docker Hub 时创建的存储库的名称）。
   
-<tag>:是有助于识别特定图像的关键字或版本号。
+tag:是有助于识别特定图像的关键字或版本号。
   
 . 存放Dockerfile 路径
   
